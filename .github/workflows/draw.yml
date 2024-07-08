@@ -20,3 +20,4 @@ jobs:
       install_repo: 'https://github.com/stijnveenman/keymap-drawer.git'
       install_branch: 'feature/additional_includes'
       config_path: 'draw-config.yaml'
+      west_config_path: './config/'
