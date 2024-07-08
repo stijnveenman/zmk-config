@@ -15,7 +15,7 @@ jobs:
     permissions:
       contents: write  # allow workflow to commit to the repo
     with:
-      keymap_patterns: "config/*.keymap"        # path to the keymaps to parse
+      keymap_patterns: "config/cradio.keymap"        # path to the keymaps to parse
       destination: 'artifact'
       install_repo: 'https://github.com/stijnveenman/keymap-drawer.git'
       install_branch: 'feature/additional_includes'
