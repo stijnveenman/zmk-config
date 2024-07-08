@@ -4,7 +4,6 @@ on:
   workflow_dispatch:  # can be triggered manually
   push:               # automatically run on changes to following paths
     paths:
-      - "*"
       - "config/*.keymap"
       - "config/*.dtsi"
       - "keymap_drawer.config.yaml"
@@ -12,7 +11,7 @@ on:
 
 jobs:
   draw:
-    uses: stijnveenman/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    uses: stijnveenman/keymap-drawer/.github/workflows/draw-zmk.yml@feature/west-init
     permissions:
       contents: write  # allow workflow to commit to the repo
     with:
