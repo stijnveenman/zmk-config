@@ -17,5 +17,5 @@ jobs:
     with:
       keymap_patterns: "config/*.keymap"        # path to the keymaps to parse
       destination: 'artifact'
-      install_repo: 'git@github.com:stijnveenman/keymap-drawer.git'
+      install_repo: 'https://github.com/stijnveenman/keymap-drawer.git'
       install_branch: 'feature/additional_includes'
