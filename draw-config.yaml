@@ -1,0 +1,4 @@
+parse_config:
+    zmk_additional_includes:
+      - "zmk-helpers/include"
+

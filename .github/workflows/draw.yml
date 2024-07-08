@@ -19,3 +19,4 @@ jobs:
       destination: 'artifact'
       install_repo: 'https://github.com/stijnveenman/keymap-drawer.git'
       install_branch: 'feature/additional_includes'
+      config_path: 'draw_config.yaml'
