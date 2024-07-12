@@ -522,10 +522,10 @@ parse_config:
     SPACE: $$mdi:keyboard-space$$
     BACKSPACE:
       type: backspace
-      tap: $$mdi:backspace$$
+      tap: $$mdi:backspace-outline$$
     BSPC:
       type: backspace
-      tap: $$mdi:backspace$$
+      tap: $$mdi:backspace-outline$$
     DELETE: $$mdi:backspace-reverse-outline$$
     DEL: $$mdi:backspace-reverse-outline$$
 
