@@ -552,7 +552,7 @@ parse_config:
     LM(X): $$mdi:content-cut$$
  
     # alt tab
-    LGUI(TAB): $$mdi:swap-horizontal$$
+    LG(TAB): $$mdi:swap-horizontal$$
 
     # pages
     PG_UP: $$mdi:menu-up$$
