@@ -348,14 +348,8 @@ draw_config:
     /*
      * Overrides
      */
-    .shifted.mdi\:alpha-w-box {
-      translate: 25px 0px;
-    }
-    .shifted.mdi\:usb {
-      translate: -25px 25px;
-    }
-    .hold.mdi\:bluetooth {
-      translate: 25px -25px;
+    .combopos-13 {
+      translate: 0px 30px;
     }
 
 parse_config:
@@ -378,8 +372,13 @@ parse_config:
     "&bt BT_CLR":
       shifted: $$mdi:bluetooth-connect$$
       tap: CLR
+
     "&smart_num 3 0":
       tap: $$mdi:numeric$$
+    "&dot_spc":
+      tap: .
+    "&caps_word":
+      tap: $$mdi:caps-lock$$
     
     # Reset
     "&sys_reset":
@@ -504,6 +503,11 @@ parse_config:
     LGUI: $$mdi:apple-keyboard-command$$
     # "Meh" key
     LS(LC(LALT)): $$mdi:star-three-points$$
+
+    # copy paste
+    LM(C): $$mdi:content-copy$$
+    LM(V): $$mdi:content-paste$$
+    LM(X): $$mdi:content-cut$$
 
     # Arrows
     UP: $$mdi:arrow-up-bold$$
