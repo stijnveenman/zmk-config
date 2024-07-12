@@ -125,14 +125,6 @@ ZMK_TRI_STATE(smart_mouse,
     ignored-layers = <MOUSE>;
 )
 
-/* Custom behaviors */
-
-// Alt+Tab swapper, requires PR #1366
-ZMK_TRI_STATE(swapper,
-    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-    ignored-key-positions = <LT2>;
-)
-
 // reuse basic mod-morph scheme
 #define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2) \
     ZMK_MOD_MORPH(NAME, \
@@ -204,11 +196,11 @@ ZMK_LAYER(base,
 
 ZMK_LAYER(nav,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    ___           ___           &kp LS(TAB)   &swapper      ___            &kp PG_UP     &kp PG_DN     NAV_DEL       NAV_BSPC      ___          
+    ___           ___            ___          ___           ___            &kp PG_UP     &kp PG_DN     NAV_DEL       NAV_BSPC      ___          
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &sk LGUI      &sk LALT      &sk LSHFT     &sk LCTRL     ___            NAV_LEFT      NAV_DOWN      NAV_UP        NAV_RIGHT     &kp RET      
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    ___           ___           ___           ___           ___            &kp INS       &kp TAB       &kp LT        &kp GT        ___          
+    ___           ___           ___           ___           ___            &kp INS       &kp TAB       &kp LT        &kp GT        &kp LGUI(TAB)
 //╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤├─────────────┼─────────────┼─────────────┴───────────────────────────╯
                                               ___           ___            ___           CANCEL                                                 
 //                                          ╰─────────────┴─────────────╯╰─────────────┴─────────────╯                                          

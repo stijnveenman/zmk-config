@@ -265,6 +265,9 @@ draw_config:
         fill: var(--color--key--bg);
         stroke: var(--color--key--border);
     }
+    .key.held {
+        fill: var(--color--material--red--300)
+    }
     .tap {
         fill: var(--color--key--text--tap);
     }
@@ -373,7 +376,7 @@ parse_config:
       tap: $$mdi:caps-lock$$
     "&smart_mouse":
       tap: $$mdi:mouse-outline$$
-    
+
     # Reset
     "&sys_reset":
       type: bootloader
@@ -541,6 +544,13 @@ parse_config:
     LM(C): $$mdi:content-copy$$
     LM(V): $$mdi:content-paste$$
     LM(X): $$mdi:content-cut$$
+ 
+    # alt tab
+    LGUI(TAB): $$mdi:swap-horizontal$$
+
+    # pages
+    PG_UP: $$mdi:menu-up$$
+    PG_DN: $$mdi:menu-down$$
 
     # Arrows
     UP: $$mdi:arrow-up-bold$$
