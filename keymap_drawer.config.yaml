@@ -432,6 +432,8 @@ parse_config:
 
     # alt tab
     "&kp LG(TAB)": $$mdi:swap-horizontal$$
+    "&kp LA(DEL)": $$mdi:backspace-reverse$$
+    "&kp LA(BSPC)": $$mdi:backspace$$
 
   # ZMK
   zmk_keycode_map:
@@ -584,8 +586,6 @@ parse_config:
       tap: $$mdi:backspace-outline$$
     DELETE: $$mdi:backspace-reverse-outline$$
     DEL: $$mdi:backspace-reverse-outline$$
-    LALT(DEL): $$mdi:backspace-reverse$$
-    LALT(BSPC): $$mdi:backspace$$
 
     # Locks
     CAPSLOCK: $$mdi:apple-keyboard-caps$$
