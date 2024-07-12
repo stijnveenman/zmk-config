@@ -381,6 +381,45 @@ parse_config:
     "&bootloader":
       tap: $$mdi:progress-download$$
 
+    # mouse
+    "&msc SCRL_LEFT":
+      shifted: $$mdi:mouse-move-vertical$$
+      tap: $$mdi:arrow-left$$
+    "&msc SCRL_RIGHT":
+      shifted: $$mdi:mouse-move-vertical$$
+      tap: $$mdi:arrow-right$$
+    "&msc SCRL_UP":
+      tap: $$mdi:mouse-move-up$$
+    "&msc SCRL_DOWN":
+      tap: $$mdi:mouse-move-down$$
+
+    "&mmv MOVE_UP":
+      shifted: $$mdi:mouse$$
+      tap: $$mdi:arrow-up-bold$$
+    "&mmv MOVE_LEFT":
+      shifted: $$mdi:mouse$$
+      tap: $$mdi:arrow-left-bold$$
+    "&mmv MOVE_DOWN":
+      shifted: $$mdi:mouse$$
+      tap: $$mdi:arrow-down-bold$$
+    "&mmv MOVE_RIGHT":
+      shifted: $$mdi:mouse$$
+      tap: $$mdi:arrow-right-bold$$
+
+    "&mkp MB4":
+      shifted: $$mdi:mouse$$
+      tap: MB4
+    "&mkp MB5":
+      shifted: $$mdi:mouse$$
+      tap: MB5
+    "&mkp MCLK":
+      shifted: $$mdi:mouse$$
+      tap: MB
+
+    "&mkp LCLK":
+      tap: $$mdi:mouse-left-click-outline$$
+    "&mkp RCLK":
+      tap: $$mdi:mouse-right-click-outline$$
 
   # ZMK
   zmk_keycode_map:
