@@ -583,6 +583,8 @@ parse_config:
       tap: $$mdi:backspace-outline$$
     DELETE: $$mdi:backspace-reverse-outline$$
     DEL: $$mdi:backspace-reverse-outline$$
+    LALT(DEL): $$mdi:backspace-reverse$$
+    LALT(BSPC): $$mdi:backspace$$
 
     # Locks
     CAPSLOCK: $$mdi:apple-keyboard-caps$$
