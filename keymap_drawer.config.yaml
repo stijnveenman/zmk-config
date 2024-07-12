@@ -377,6 +377,12 @@ parse_config:
     "&smart_mouse":
       tap: $$mdi:mouse-outline$$
 
+    # hml combos
+    "&hmr_lpar_lt RS(LCTRL) 0":
+      tap: (
+    "&hmr_rpar_gt RS(LALT) 0":
+      tap: )
+
     # Reset
     "&sys_reset":
       type: bootloader
