@@ -430,6 +430,9 @@ parse_config:
     "&mkp RCLK":
       tap: $$mdi:mouse-right-click-outline$$
 
+    # alt tab
+    "&kp LG(TAB)": $$mdi:swap-horizontal$$
+
   # ZMK
   zmk_keycode_map:
     # Symbols
@@ -551,8 +554,6 @@ parse_config:
     LM(V): $$mdi:content-paste$$
     LM(X): $$mdi:content-cut$$
  
-    # alt tab
-    LG(TAB): $$mdi:swap-horizontal$$
 
     # pages
     PG_UP: $$mdi:menu-up$$
