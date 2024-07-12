@@ -344,14 +344,6 @@ draw_config:
         --color--key--text--hold: var(--color--ghost--text--hold);
     }
 
-
-    /*
-     * Overrides
-     */
-    .combopos-13 {
-      translate: 0px 30px;
-    }
-
 parse_config:
   skip_binding_parsing: false
   
@@ -379,6 +371,8 @@ parse_config:
       tap: .
     "&caps_word":
       tap: $$mdi:caps-lock$$
+    "&smart_mouse":
+      tap: $$mdi:mouse-outline$$
     
     # Reset
     "&sys_reset":
@@ -569,6 +563,15 @@ parse_config:
     RG(RS(V)):
       tap: $$mdi:video$$
       hold: zoom
+
+
+  zmk_combos:
+    combo_mouse:
+      align: top
+      offset: 0.5
+    combo_cut:
+      align: bottom
+      offset: 0.2
 
 
   zmk_additional_includes:
