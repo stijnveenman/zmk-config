@@ -149,7 +149,7 @@ ZMK_HOLD_TAP(lt_spc,
     tapping-term-ms = <200>;
     quick-tap-ms = <QUICK_TAP_MS>;
     bindings = <&mo>, <&spc_morph>;
-);
+)
 SIMPLE_MORPH(spc_morph, SFT, &kp SPACE, &dot_spc)
 ZMK_MACRO(dot_spc,
     wait-ms = <0>;
