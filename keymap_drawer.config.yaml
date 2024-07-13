@@ -378,9 +378,9 @@ parse_config:
       tap: $$mdi:mouse-outline$$
 
     # hml combos
-    "&hmr_lpar_lt RS(LCTRL) 0":
+    "&hmr RS(LCTRL) LPAR":
       tap: (
-    "&hmr_rpar_gt RS(LALT) 0":
+    "&hmr RS(LALT) RPAR":
       tap: )
 
     # Reset
