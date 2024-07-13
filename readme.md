@@ -1,20 +1,15 @@
-# urob's zmk-config
+# StijnVeenman's zmk-config
 
 This is my personal [ZMK firmware](https://github.com/zmkfirmware/zmk/)
-configuration. It consists of a 34-keys base layout that is re-used for various
-boards, including my Corneish Zen and my Planck.
+configuration. It based on the awesome [urob/zmk-config](https://github.com/urob/zmk-config),
+but then updates with my personal preferences and keybindings.
 
-This branch is updated for the latest ZMK using Zephyr 3.5. A legacy version
-compatible with Zephyr 3.0 is available
-[here](https://github.com/urob/zmk-config/tree/main-zephyr-3.0).
+It also adds automatic keymap drawing with [keymap-drawer](https://github.com/caksoylar/keymap-drawer).
 
 ## Highlights
 
 - clean keymap + unicode setup using helper macros from
   [zmk-helpers](https://github.com/urob/zmk-helpers)
-- the base keymap and combo setup are independent of the physical location of
-  keys and are re-used for multiple keyboards. The configuration is fit onto
-  larger boards by padding it via a modular structure of "extra keys"
 - ["timeless" homerow mods](#timeless-homerow-mods)
 - combos replacing the symbol layer
 - smart numbers and smart mouse layers that automatically toggle off when done
@@ -26,8 +21,6 @@ compatible with Zephyr 3.0 is available
   !</kbd>
 - <kbd>shift</kbd> + <kbd>space</kbd> morphs into <kbd>dot</kbd> →
   <kbd>space</kbd> → <kbd>sticky-shift</kbd>
-- "Greek" layer for mathematical typesetting (activated as sticky-layer via a
-  combo)
 - modified Github Actions workflow that recognizes git-submodules
 - automated
   [build-scripts](https://github.com/urob/zmk-config/tree/main/scripts#readme)
