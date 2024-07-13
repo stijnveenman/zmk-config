@@ -382,6 +382,8 @@ parse_config:
       tap: (
     "&hmr RS(LALT) RPAR":
       tap: )
+    "&hml LS(LALT) TAB":
+      tap: $$mdi:keyboard-tab$$
 
     # Reset
     "&sys_reset":
