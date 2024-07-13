@@ -435,6 +435,12 @@ parse_config:
     "&kp LA(DEL)": $$mdi:backspace-reverse$$
     "&kp LA(BSPC)": $$mdi:backspace$$
 
+    # copy paste
+    "&kp LG(C)": $$mdi:content-copy$$
+    "&kp LG(V)": $$mdi:content-paste$$
+    "&kp LG(X)": $$mdi:content-cut$$
+
+
   # ZMK
   zmk_keycode_map:
     # Symbols
@@ -551,10 +557,6 @@ parse_config:
     # "Meh" key
     LS(LC(LALT)): $$mdi:star-three-points$$
 
-    # copy paste
-    LM(C): $$mdi:content-copy$$
-    LM(V): $$mdi:content-paste$$
-    LM(X): $$mdi:content-cut$$
  
 
     # pages
