@@ -4,7 +4,8 @@ This is my personal [ZMK firmware](https://github.com/zmkfirmware/zmk/)
 configuration. It based on the awesome [urob/zmk-config](https://github.com/urob/zmk-config),
 but then updates with my personal preferences and keybindings.
 
-It also adds automatic keymap drawing with [keymap-drawer](https://github.com/caksoylar/keymap-drawer).
+It also adds keymap drawing with [keymap-drawer](https://github.com/caksoylar/keymap-drawer),
+writing to a commit can be manually triggered using a workflow call.
 
 ## Highlights
 
@@ -26,7 +27,7 @@ It also adds automatic keymap drawing with [keymap-drawer](https://github.com/ca
   [build-scripts](https://github.com/urob/zmk-config/tree/main/scripts#readme)
   for local and Docker-based building (independently of VS Code)
 
-![](img/keymap.png)
+![](keymap-drawer/cradio.svg)
 
 ## Timeless homerow mods
 
