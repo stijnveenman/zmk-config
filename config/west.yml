@@ -13,6 +13,6 @@ manifest:
       import: app/west.yml
     - name: zmk-helpers
       remote: urob
-      revision: v2
+      revision: a98b7f7e4a5130a5150dce81bb8aa419fc3ca3c0
   self:
     path: config
