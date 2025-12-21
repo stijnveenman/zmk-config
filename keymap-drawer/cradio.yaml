@@ -11,6 +11,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: ▽, type: trans}
   - A
   - S
   - D
@@ -30,7 +31,6 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - U
-  - {t: ▽, type: trans}
   - W
   - W
   - $$mdi:keyboard-space$$
