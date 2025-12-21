@@ -3,15 +3,19 @@ on:
   workflow_call:
     inputs:
       destination:
-        description: 'Add the output files to a commit, as artifacts or both, values: `commit`, `artifact`, `both`'
-        default: 'artifact'
+        description:
+          "Add the output files to a commit, as artifacts or both, values:
+          `commit`, `artifact`, `both`"
+        default: "artifact"
         required: false
         type: string
   workflow_dispatch:
     inputs:
       destination:
-        description: 'Add the output files to a commit, as artifacts or both, values: `commit`, `artifact`, `both`'
-        default: 'artifact'
+        description:
+          "Add the output files to a commit, as artifacts or both, values:
+          `commit`, `artifact`, `both`"
+        default: "artifact"
         required: false
         type: string
   push:
@@ -22,16 +26,13 @@ on:
 
 jobs:
   draw:
-    uses: stijnveenman/keymap-drawer/.github/workflows/draw-zmk.yml@feature/west-init
+    # uses: stijnveenman/keymap-drawer/.github/workflows/draw-zmk.yml@feature/west-init
     # use below once https://github.com/caksoylar/keymap-drawer/pull/107 has been merged
-    # uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
     permissions:
       contents: write
     with:
       keymap_patterns: "config/cradio.keymap"
-      config_path: 'keymap_drawer.config.yaml'
+      config_path: "keymap_drawer.config.yaml"
       destination: ${{ inputs.destination }}
-      west_config_path: './config/'
-      # install repo and branch can be removed once https://github.com/caksoylar/keymap-drawer/pull/105 has been merged
-      install_repo: 'https://github.com/stijnveenman/keymap-drawer.git'
-      install_branch: 'feature/additional_includes'
+      west_config_path: "./config/"
