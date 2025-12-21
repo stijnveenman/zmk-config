@@ -3,6 +3,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define  HOST_OS 2
+#include "zmk-helpers/key-labels/34.h"
 #include "zmk-helpers/helper.h"
 
 #define DEF 0
@@ -24,6 +25,7 @@ ZMK_LAYER(base,
 //                                          ╰─────────────┴─────────────╯╰─────────────┴─────────────╯                                          
 )
 
+ZMK_COMBO(sys_enter, &tog SYS, LT4 LT3, LT2 RT2 RT3 RT4, DEF SYS)
 ZMK_LAYER(sys,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR      ___           ___           ___           ___           ___          
