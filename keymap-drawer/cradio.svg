@@ -331,17 +331,17 @@ path.combo {
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <use href="#mdi:exit-to-app" xlink:href="#mdi:exit-to-app" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:exit-to-app"/>
 </g>
-<g transform="translate(120, 66)" class="key trans keypos-1">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(120, 66)" class="key keypos-1">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<text x="0" y="0" class="key tap">Q</text>
 </g>
-<g transform="translate(200, 40)" class="key trans keypos-2">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(200, 40)" class="key keypos-2">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<text x="0" y="0" class="key tap">I</text>
 </g>
-<g transform="translate(280, 63)" class="key trans keypos-3">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(280, 63)" class="key keypos-3">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
+<text x="0" y="0" class="key tap">E</text>
 </g>
 <g transform="translate(360, 74)" class="key keypos-4">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
