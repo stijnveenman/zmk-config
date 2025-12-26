@@ -38,11 +38,7 @@
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
-#ifndef LH2
-  #define THUMBS LH1 LH0 RH0 RH1         // Thumbs on 34 keys.
-#else
-  #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2 // Thumbs on 36+ keys.
-#endif
+#define THUMBS LH1 LH0 RH0 RH1
 
 #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS)                                 \
   ZMK_HOLD_TAP(NAME, bindings = <HOLD>, <TAP>; flavor = "balanced";            \
@@ -169,9 +165,6 @@ ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
 #define CANCEL    &kp K_CANCEL            // Cancel caps-word & auto-layers.
 #define DSK_PREV  &hmr LCTRL LG(LC(LEFT)) // Previous desktop.
 #define DSK_NEXT  &hmr LALT LG(LC(RIGHT)) // Next     desktop.
-#define PIN_WIN   &kp LG(LC(LS(Q)))       // Pin window across desktops.
-#define PIN_APP   &kp LG(LC(LS(A)))       // Pin application across desktops.
-#define DSK_MGR   &kp LA(GRAVE)           // Desktop manager.
 #define VOL_DOWN  &hmr RSHFT C_VOL_DN
 
 /* Keymap */
@@ -213,7 +206,7 @@ ZMK_BASE_LAYER(Fn,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &hml LGUI F11 &hml LALT F4  &hml LSHFT F5 &hml LCTRL F6 ___         ,   ___           DSK_PREV      VOL_DOWN      DSK_NEXT      ___         ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &kp F10       &kp F1        &kp F2        &kp F3        ___         ,   PIN_APP       PIN_WIN       DSK_MGR       ___           ___         ,
+    &kp F10       &kp F1        &kp F2        &kp F3        ___         ,   ___           ___           ___           ___           ___         ,
 //╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
                                               ___           ___         ,   &kp C_MUTE    &kp C_PP
 //                                          ╰─────────────┴─────────────╯ ╰─────────────┴─────────────╯
