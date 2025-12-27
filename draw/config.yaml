@@ -31,6 +31,7 @@ parse_config:
     "&num_dance": { "t": "Numword", "s": "Sticky Num" }
     "&magic_shift": { "t": Magic, "h": "Shift" }
     "&smart_mouse": Smart Mouse
+    "&qexclhmr LALT 0": { "t": "?", "h": "Alt", s: "!" }
 
     "&hml LS(LALT)TAB": Tab
     "&hm_combo_ldr": Leader

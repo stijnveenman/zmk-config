@@ -7,10 +7,11 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEF 0
-#define NAV 1
-#define FN 2
-#define NUM 3
-#define SYS 4
+#define SYM 1
+#define NAV 2
+#define FN 3
+#define NUM 4
+#define SYS 5
 
 #define XXX &none
 #define ___ &trans
@@ -48,6 +49,9 @@
 
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS) // Left-hand HRMs.
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
+
+MAKE_HRM(hll, &mo, &kp, KEYS_R THUMBS) // Left-hand HRM momentary layer
+MAKE_HRM(hlr, &mo, &kp, KEYS_L THUMBS) // Left-hand HRM momentary layer
 
 // Hack: Make HRM combos tap-only (cf, ZMK issue #544).
 #define ZMK_COMBO_8(NAME, TAP, POS, LAYERS, COMBO_MS, IDLE_MS, HOLD, SIDE)     \
@@ -155,6 +159,9 @@ ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
 #define DSK_NEXT  &hmr LALT LG(LC(RIGHT)) // Next     desktop.
 #define VOL_DOWN  &hmr RSHFT C_VOL_DN
 
+// specific qexcl hmr 
+MAKE_HRM(qexclhmr, &mo, &qexcl, KEYS_L THUMBS) // Left-hand HRM momentary layer
+
 /* Keymap */
 
 ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS) // FN + NUM --> SYS.
@@ -168,9 +175,21 @@ ZMK_BASE_LAYER(Base,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
     &kp Q         &kp W         &kp F         &kp P         &kp B       ,   &kp J         &kp L         &kp U         &kp Y         &kp SQT     ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &hml LGUI A   &hml LALT R   &hml LSHFT S  &hml LCTRL T  &kp G       ,   &kp M         &hmr LCTRL N  &hmr RSHFT E  &hmr LALT I   &hmr LGUI O ,
+    &hml LGUI A   &hll SYM R    &hml LSHFT S  &hml LCTRL T  &kp G       ,   &kp M         &hmr LCTRL N  &hmr RSHFT E  &hlr SYM I    &hmr LGUI O ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &kp Z         &kp X         &kp C         &kp D         &kp V       ,   &kp K         &kp H         &comma_morph  &dot_morph    &qexcl      ,
+    &hml LALT Z   &kp X         &kp C         &kp D         &kp V       ,   &kp K         &kp H         &comma_morph  &dot_morph    &qexclhmr LALT 0,
+//╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
+                                              &lt_spc NAV 0 &lt FN RET  ,   SMART_NUM     MAGIC_SHIFT
+//                                          ╰─────────────┴─────────────╯ ╰─────────────┴─────────────╯
+)
+
+ZMK_BASE_LAYER(Symbols,
+//╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+    &kp Q         &kp W         &kp F         &kp P         &kp B       ,   &kp J         &kp L         &kp U         &kp Y         &kp SQT     ,
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    &hml LGUI A   &hll SYM R    &hml LSHFT S  &hml LCTRL T  &kp G       ,   &kp M         &hmr LCTRL N  &hmr RSHFT E  &hlr SYM I    &hmr LGUI O ,
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    &hml LALT Z   &kp X         &kp C         &kp D         &kp V       ,   &kp K         &kp H         &comma_morph  &dot_morph    &qexclhmr LALT 0,
 //╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
                                               &lt_spc NAV 0 &lt FN RET  ,   SMART_NUM     MAGIC_SHIFT
 //                                          ╰─────────────┴─────────────╯ ╰─────────────┴─────────────╯
