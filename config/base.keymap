@@ -153,6 +153,9 @@ ZMK_MACRO(dot_spc, bindings = <&kp DOT &kp SPACE &sk LSHFT>; wait-ms = <0>;
 // Sticky shift + leader.
 ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
 
+// => TODO: on shift, create small arrow
+ZMK_MACRO(big_arrow, bindings = <&kp EQUAL &kp GT>;)
+
 // Misc aliases.
 #define CANCEL    &kp K_CANCEL            // Cancel caps-word & auto-layers.
 #define DSK_PREV  &hmr LCTRL LG(LC(LEFT)) // Previous desktop.
@@ -185,13 +188,13 @@ ZMK_BASE_LAYER(Base,
 
 ZMK_BASE_LAYER(Symbols,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &kp Q         &kp W         &kp F         &kp P         &kp B       ,   &kp J         &kp L         &kp U         &kp Y         &kp SQT     ,
+    &kp GRAVE     &kp LT        &kp GT        &kp MINUS     &kp PIPE    ,   &kp CARET     &kp LBRC      &kp RBRC      &kp DOLLAR    &big_arrow  ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &hml LGUI A   &hll SYM R    &hml LSHFT S  &hml LCTRL T  &kp G       ,   &kp M         &hmr LCTRL N  &hmr RSHFT E  &hlr SYM I    &hmr LGUI O ,
+    &kp EXCL      &kp STAR      &kp SLASH     &kp EQUAL     &kp AMPS    ,   &kp HASH      &kp LPAR      &kp RPAR      &kp SEMI      &kp DQT     ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &hml LALT Z   &kp X         &kp C         &kp D         &kp V       ,   &kp K         &kp H         &comma_morph  &dot_morph    &qexclhmr LALT 0,
+    &kp TILDE     &kp PLUS      &kp LBKT      &kp RBKT      &kp PRCNT   ,   &kp AT        &kp COLON     &comma_morph  &dot_morph    &kp APOS    ,
 //╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
-                                              &lt_spc NAV 0 &lt FN RET  ,   SMART_NUM     MAGIC_SHIFT
+                                              ___           ___         ,   ___           ___
 //                                          ╰─────────────┴─────────────╯ ╰─────────────┴─────────────╯
 )
 
