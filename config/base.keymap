@@ -153,8 +153,10 @@ ZMK_MACRO(dot_spc, bindings = <&kp DOT &kp SPACE &sk LSHFT>; wait-ms = <0>;
 // Sticky shift + leader.
 ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
 
-// => TODO: on shift, create small arrow
+// Tap: => | Shift + Tap: ->
+SIMPLE_MORPH(arrow_morph, SFT, &big_arrow, &small_arrow)
 ZMK_MACRO(big_arrow, bindings = <&kp EQUAL &kp GT>;)
+ZMK_MACRO(small_arrow, bindings = <&kp MINUS &kp GT>;)
 
 // Misc aliases.
 #define CANCEL    &kp K_CANCEL            // Cancel caps-word & auto-layers.
@@ -188,7 +190,7 @@ ZMK_BASE_LAYER(Base,
 
 ZMK_BASE_LAYER(Symbols,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &kp GRAVE     &kp LT        &kp GT        &kp MINUS     &kp PIPE    ,   &kp CARET     &kp LBRC      &kp RBRC      &kp DOLLAR    &big_arrow  ,
+    &kp GRAVE     &kp LT        &kp GT        &kp MINUS     &kp PIPE    ,   &kp CARET     &kp LBRC      &kp RBRC      &kp DOLLAR    &arrow_morph,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &kp EXCL      &kp STAR      &kp SLASH     &kp EQUAL     &kp AMPS    ,   &kp HASH      &kp LPAR      &kp RPAR      &kp SEMI      &kp DQT     ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤

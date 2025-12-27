@@ -33,6 +33,7 @@ parse_config:
     "&smart_mouse": Smart Mouse
     "&qexclhmr LALT 0": { "t": "?", "h": "Alt", s: "!" }
     "&big_arrow": =>
+    "&small_arrow": ->
 
     "&hml LS(LALT)TAB": Tab
     "&hm_combo_ldr": Leader
