@@ -1270,7 +1270,13 @@ path.combo { stroke: #7f7f7f; }
 <path d="M28,137 l0,-37" class="combo"/>
 <path d="M28,137 l0,37" class="combo"/>
 <rect rx="6" ry="6" x="14" y="124" width="28" height="26" class="combo"/>
-<text x="28" y="137" class="combo tap">Gui</text>
+<a href="#Base">
+<text x="28" y="137" class="combo tap layer-activator">Base</text>
+</a><text x="28" y="148" class="combo hold">toggle</text>
+</g>
+<g class="combo combopos-8">
+<rect rx="6" ry="6" x="14" y="96" width="28" height="26" class="combo"/>
+<text x="28" y="109" class="combo tap">Gui</text>
 </g>
 </g>
 </g>
