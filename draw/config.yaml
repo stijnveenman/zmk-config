@@ -39,8 +39,6 @@ parse_config:
     "&hm_combo_ldrsh": Shift+Leader
     "&hm_combo_lpar": { "t": "(", "right": "<" }
     "&hm_combo_rpar": { "t": ")", "right": ">" }
-    "&kp LBKT": { "t": "[", "right": "{" }
-    "&kp RBKT": { "t": "]", "right": "}" }
 
     "&mmv MOVE_UP": Mouse ↑
     "&mmv MOVE_DOWN": Mouse ↓
