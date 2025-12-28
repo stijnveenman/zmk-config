@@ -166,7 +166,7 @@ ZMK_MACRO(small_arrow, bindings = <&kp MINUS &kp GT>;)
 #define VOL_DOWN  &hmr RSHFT C_VOL_DN
 
 // specific qexcl hmr 
-MAKE_HRM(qexclhmr, &mo, &qexcl, KEYS_L THUMBS) // Left-hand HRM momentary layer
+MAKE_HRM(qexclhmr, &kp, &qexcl, KEYS_L THUMBS) // Left-hand HRM momentary layer
 
 /* Keymap */
 
@@ -201,6 +201,7 @@ ZMK_BASE_LAYER(Symbols,
 //                                          ╰─────────────┴─────────────╯ ╰─────────────┴─────────────╯
 )
 
+// TODO: change nav to use nvim keybindings
 ZMK_BASE_LAYER(Nav,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
     &kp LA(F4)    ___           &kp LS(TAB)   &swapper      ___         ,   &kp PG_UP     NAV_BSPC      NAV_UP        NAV_DEL       ___         ,
