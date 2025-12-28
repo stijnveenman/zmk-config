@@ -14,6 +14,7 @@
         }; \
     };
 
+ZMK_LEADER_SEQUENCE(gameto,     &to GAME,       G A)
 // BLE and USB
 #ifdef CONFIG_WIRELESS
 ZMK_LEADER_SEQUENCE(usb,        &out OUT_USB,   U S B)
