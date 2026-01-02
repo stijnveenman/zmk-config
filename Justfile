@@ -13,6 +13,10 @@ _parse_targets $expr:
     filter="(($attrs | map(. // [.]) | combinations), ((.include // {})[] | $attrs)) | join(\",\")"
     echo "$(yq -r "$filter" build.yaml | grep -v "^," | grep -i "${expr/#all/.*}")"
 
+_parse_layers: draw
+    #!/usr/bin/env bash
+    echo "$(yq -r '.layers | keys.[]' {{ draw }}/base.yaml)"
+
 # build firmware for single board & shield combination
 _build_single $board $shield $snippet $artifact *west_args:
     #!/usr/bin/env bash
@@ -61,6 +65,23 @@ draw:
     yq -Yi '.combos.[].l = ["Combos"]' "{{ draw }}/base.yaml"
     keymap -c "{{ draw }}/config.yaml" draw "{{ draw }}/base.yaml" -k "ferris/sweep" >"{{ draw }}/base.svg"
 
+_draw_single $layer:
+    #!/usr/bin/env bash
+    set -euo pipefail
+
+    mkdir -p "{{draw}}/layers"
+    keymap -c "{{ draw}}/config.yaml" draw "{{ draw }}/base.yaml" -k "ferris/sweep" -s "$layer" > "{{ draw }}/layers/$layer.svg"
+
+draw-layers:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    targets=$(just _parse_layers)
+
+    [[ -z $targets ]] && echo "No matching layers found. Aborting..." >&2 && exit 1
+    echo "$targets" | while IFS=, read -r layer; do
+      just _draw_single "$layer"
+    done
+
 # initialize west
 init:
     west init -l config
@@ -70,6 +91,9 @@ init:
 # list build targets
 list:
     @just _parse_targets all | sed 's/,*$//' | sort | column
+
+list-layers:
+    @just _parse_layers | column
 
 # update west
 update:
