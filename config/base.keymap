@@ -170,7 +170,7 @@ MAKE_HRM(qexclhmr, &kp, &qexcl, KEYS_L THUMBS) // Left-hand HRM momentary layer
 
 /* Keymap */
 
-ZMK_CONDITIONAL_LAYER(sys, FN NAV, SYS) // FN + NUM --> SYS.
+ZMK_CONDITIONAL_LAYER(sys, FN SYM, SYS) // FN + SYM --> SYS.
 
 #ifndef ZMK_BASE_LAYER
   #define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                 \
